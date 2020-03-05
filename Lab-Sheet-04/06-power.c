@@ -4,16 +4,23 @@
 #include<stdio.h>
 #include<math.h>
 
-int main() {
+int main(){
 	int a,b,c;
+
 	printf("Enter two numbers first being base and second being power");
 	scanf("%d%d",&a,&b);
+
 	c = p(a,b);
+
 	printf("The value is %d",c);
 }
+
 int p(int a,int b){
+
 	int po;
+
 	po = pow(a,b);
+
 	return po;
 }
 

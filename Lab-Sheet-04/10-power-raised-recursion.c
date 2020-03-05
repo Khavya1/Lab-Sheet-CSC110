@@ -1,7 +1,8 @@
 #include <stdio.h>
+
 long int raise(int number, int power);
 
-void main() {
+int main(){
 
     int number, power;
     
@@ -14,12 +15,11 @@ void main() {
     printf("The result of %d raised to the power %d is %d\n", number, power, raise(number, power));
 }
 
-long int raise(int number, int power) {
+long int raise(int number, int power){
 
     if(power >= 1)
         return number * raise(number, power - 1);
 
     else 
-        return number;
-    
+        return number;    
 }

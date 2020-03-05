@@ -1,0 +1,178 @@
+\documentclass[11pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ right=14mm,
+ bottom=20mm,
+ top=18mm,
+}
+
+\lstset{
+    frame=single,
+    breaklines=true,
+    postbreak=\raisebox{0pt}[0pt][0pt]{\ensuremath{\hookrightarrow\space}},
+    basicstyle=\ttfamily,
+    showstringspaces=false,
+}
+ 
+\renewcommand{\chaptername}{Program}
+
+\title{Lab Sheet 04 \\
+      \textbf{Fundamentals Of C Programming} \\
+      CSC-110}
+\author{\textbf{Anukul Adhikari} \\ 11/21/2076}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\chapter*{Information}
+All code used in this report including source code of this report itself is available at:\\ \texttt{https://github.com/beinganukul/Lab-Sheet-CSC110}
+\section*{Software}
+Following compiler and configuration is verified to work with the snippets in this report:\\
+\texttt{Compiler - gcc version 9.2.1 20200130\\
+Compiler target - Arch Linux 9.2.1+20200130-2
+}
+
+\tableofcontents
+
+\chapter{Simple Calculator}
+\section{Problem Statement}
+Write a program that takes input of two numbers and performs addition,subtraction,multiplication,division between them using user defined function called $add$(),$sub$(),$div$() and $mul$().
+\section{Program}
+\lstinputlisting[language=c]{01-calculator-function.c}
+
+\chapter{Which is Largest one?}
+\section{Problem Statement}
+Write a program to find out the largest among threee numbers using user defined function.
+\section{Algorithm}
+\begin{itemize}
+  \item Accept input and save the integer as \texttt{number}.
+  \item Check if $a$ is greater than $b$.
+  \subitem -If true check if $a$ is greater than $c$
+  \subitem -If true a is greatest 
+  \subsubitem -If false $c$ is greatest
+  \subitem -If flase check if $b$ is greater than $c$.
+  \subitem -If true $b$ is greatest 
+  \subsubitem -If false $c$ is greatest
+\end{itemize}
+\leavevmode
+\section{Program}
+\lstinputlisting[language=c]{02-compare.c}
+
+\chapter{Prime Numbers}
+\section{Problem Statement}
+Write a program to check if the given number is prime or not using user defined function. 
+\section{Algorithm}
+\begin{itemize}
+  \item Accept input and save the integer as \texttt{a}.
+  \item A for loop is iterated from $i = 2 to i < n/2$.
+  \item In each iteration, whether $n$ is perfectly divisible by $i$ is checked.
+  \item If $n$ is perfectly divisible by $i$, $n$ is not a prime number. In this case, flag is set to $1$, and the loop is terminated using the break statement.
+  \item After the loop, if $n$ is a prime number, flag will still be $0$.
+  \item However, if $n$ is a non-prime number, flag will be $1$.
+\end{itemize}
+\leavevmode
+\section{Program}
+\lstinputlisting[language=c]{04-prime-check.c}
+
+\chapter{Factorial Using User Defined Function}
+\section{Problem Statement}
+Write a program to find factorial of given number using user defined function named long int factorial($int$).
+
+\section{Program}
+\lstinputlisting[language=c]{05-factorial.c}
+
+\chapter{Power Function}
+\section{Problem Statement}
+Write a program to calculate $a$ raised to power $b$ using user defined function with following prototype int power($int$,$int$).
+\section{Algorithm}
+To use pow function you need to define another header file math.h
+NOTE: For $gcc$ users while compiling add $-lm$ to link math library else it won't work.
+\section{Program}
+		\lstinputlisting[language=c]{06-power.c}
+		
+
+\chapter{Recursion in Factorial}
+\section{Problem Statement}
+Write an algorithm and program to compute the following using recursion.
+\begin{enumerate}
+  \item factorial of an integer $n$.
+\end{enumerate}
+\section{Algorithm}
+The factorial of a positive integer $n$ can be obtained recursively using the following algorithm.
+\begin{itemize}
+\item If $n=0$, return 1.
+\item Multiply $n$ by $(n-1)!$ and return the result. 
+\end{itemize}
+
+\section{Program}
+        \lstinputlisting[language=c]{07-factorial-recursion.c}
+
+\chapter{Recursion in Sum-Series}
+\section{Problem Statement}
+Write an algorithm and program to compute the following using recursion.
+\begin{enumerate}
+  \item calculate sum of series $1+2+3+4+.....+n$ using recursion.
+\end{enumerate}
+\section{Algorithm}
+The sum of series of a positive integer upto $n$ can be obtained recursively using the following algorithm.
+\begin{itemize}
+\item If $n=0$, return 1.
+\item Add $n$ with $(n-1)$ and return the result. 
+\end{itemize}
+
+\section{Program}
+        \lstinputlisting[language=c]{08-sum-series-recursion.c}
+
+\chapter{Recursion in Fibonacci}
+\section{Problem Statement}
+Write an algorithm and program to compute the following using recursion.
+\begin{enumerate}
+  \item calculate $n$ number of fibonacci numbers using recursion.
+\end{enumerate}
+\section{Algorithm}
+The sum of series of a positive integer upto $n$ can be obtained recursively using the following algorithm.
+\begin{itemize}
+\item If $n=0$, return 0.
+\item If $n=1$, return 1.
+\item Add $(n-1)$ with $(n-2)$ and return the result. 
+\end{itemize}
+
+\section{Program}
+        \lstinputlisting[language=c]{09-fibonacci-using-recursion.c}
+
+\chapter{Recursion in Power}
+\section{Problem Statement}
+Write an algorithm and program to compute the following using recursion.
+\begin{enumerate}
+  \item computation of $a^b$ (a raised to the power b)
+\end{enumerate}
+\section{Algorithm}
+The result of computation of $a^b$ (a raised to the power b) can be obtained using following algorithm.
+\begin{itemize}
+\item If $b = 1$, return $a$.
+\item Multiply $a$ by the result of $a^{b-1}$.
+\end{itemize}
+\section{Program}
+        \lstinputlisting[language=c]{10-power-raised-recursion.c}
+        
+\chapter{Sum Of Finite Series}
+\section{Problem Statement}
+Write a program to calculate the value of the following finite series.
+$1+x+x^2/2!+x^3/3!+..$ upto n terms
+\section{Program}
+\lstinputlisting[language=c]{11-finite-series.c}
+
+\chapter{Sum of Natural Numbers}
+\section{Problem Statement}
+Write a program to find the sum of first twenty natural numbers using function.
+\section{Program}
+\lstinputlisting[language=c]{12-sum-of-natural-numbers.c}
+
+\end{document}

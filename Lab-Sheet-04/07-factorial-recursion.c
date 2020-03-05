@@ -1,7 +1,8 @@
 #include <stdio.h>
+
 long int factorial(int number);
 
-void main() {
+int main(){
 
     int number;
     
@@ -11,12 +12,11 @@ void main() {
     printf("The factorial of %d is %ld\n", number, factorial(number));
 }
 
-long int factorial(int number) {
+long int factorial(int number){
 
     if(number >= 1)
         return number * factorial(number - 1);
 
     else 
-        return 1;
-    
+        return 1;    
 }

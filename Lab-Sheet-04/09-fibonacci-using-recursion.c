@@ -1,14 +1,19 @@
 #include<stdio.h>
 
-int main() {
+int main(){
+
 	int n,i=0,c;
+
 	printf("Fibonacci Series");
 	scanf("%d",&n);
+
 	for(c=1;c<=n;c++){
+
 		printf("%d \n",Fibonacci(i));
 		i++;
 	}
 }
+
 int Fibonacci(int n){
 	if(n==0){
 		return 0;
