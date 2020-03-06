@@ -1,5 +1,7 @@
 #include<stdio.h>
 
+float mul(int,float);
+
 int main(){
 
 	int a;
@@ -10,13 +12,13 @@ int main(){
 
 	c = mul(a,b);
 
-	printf("%f is the multiplied value");
+	printf("%f is the multiplied value",c);
 }
 
-int mul(int a,float b){
+float mul(int a,float b){
 	float f;
 
-	f = a*b;
+	f = (float)a*b;
 
 	return f;
 }

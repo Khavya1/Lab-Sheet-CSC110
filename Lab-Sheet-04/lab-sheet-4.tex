@@ -23,9 +23,9 @@
 \renewcommand{\chaptername}{Program}
 
 \title{Lab Sheet 04 \\
-      \textbf{Fundamentals Of C Programming} \\
+      \textbf{C Programming} \\
       CSC-110}
-\author{\textbf{Anukul Adhikari} \\ 11/21/2076}
+\author{\textbf{Anukul Adhikari} \\ 11/23/2076}
 \date{\today}
 
 \begin{document}
@@ -64,6 +64,14 @@ Write a program to find out the largest among threee numbers using user defined 
 \leavevmode
 \section{Program}
 \lstinputlisting[language=c]{02-compare.c}
+
+\chapter{Power Function}
+\section{Multiplication}
+Write a function which recieves a float and int from main(),finds the product of these two and returns the product which is printed through main.
+\section{Compilation Note}
+You must define function prototype to propperly compile the code otherwise $gcc$ compiler will throw $Conflicting  Types  for  Error$ - Is a common mistake in programming it occurs due to incompatibility of parameters/arguments type in declaration and definition of the function.
+\section{Program}
+		\lstinputlisting[language=c]{03-multiply.c}
 
 \chapter{Prime Numbers}
 \section{Problem Statement}

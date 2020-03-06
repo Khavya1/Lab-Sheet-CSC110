@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 long int raise(int number, int power);
-
 int main(){
 
     int number, power;
