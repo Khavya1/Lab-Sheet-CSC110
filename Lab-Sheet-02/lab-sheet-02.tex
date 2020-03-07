@@ -1,0 +1,130 @@
+ \documentclass[11pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ right=14mm,
+ bottom=20mm,
+ top=18mm,
+}
+
+\lstset{
+    frame=single,
+    breaklines=true,
+    postbreak=\raisebox{0pt}[0pt][0pt]{\ensuremath{\hookrightarrow\space}},
+    basicstyle=\ttfamily,
+    showstringspaces=false,
+}
+ 
+\renewcommand{\chaptername}{Program}
+
+\title{Lab Sheet 02 \\
+      \textbf{C Programming} \\
+      CSC-110}
+\author{\textbf{Anukul Adhikari} \\ 11/24/2076}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\chapter*{Information}
+All code used in this report including source code of this report itself is available at:\\ \texttt{https://github.com/beinganukul/Lab-Sheet-CSC110}
+\section*{Software}
+Following compiler and configuration is verified to work with the snippets in this report:\\
+\texttt{Compiler - gcc version 9.2.1 20200130\\
+Compiler target - Arch Linux 9.2.1+20200130-2
+}
+
+\tableofcontents
+
+\chapter{Fibonacci Series}
+\section{Problem Statement}
+Write a program to generate Fibonacci Series.
+\section{Program}
+\lstinputlisting[language=c]{01-fibonacci-series.c}
+
+\chapter{Armstrong Number}
+\section{Problem Statement}
+Write a program to print out all the armstrong number between $1$ to $100$.
+\section{Program}
+\lstinputlisting[language=c]{02-armstrong-number.c}
+
+\chapter{While Loop}
+\section{Problem Statement}
+Write a program to generate numbers from 1 to 10 using while loop.
+\section{Program}
+		\lstinputlisting[language=c]{04-1-10-while.c}
+
+\chapter{While Loop}
+\section{Problem Statement}
+Write a program to generate numbers from 9 to 0 using while loop.
+\section{Algorithm}
+\section{Program}
+\lstinputlisting[language=c]{05-9-0-while.c}
+
+\chapter{While Loop}
+\section{Problem Statement}
+Write a program to print all the numbers from 10 to 1 and find their sum using while loop.
+\section{Program}
+\lstinputlisting[language=c]{06-sum-from-10-1.c}
+
+\chapter{Factorial}
+\section{Problem Statement}
+Write a program to calculate factorial of a given number.
+\section{Program}
+\lstinputlisting[language=c]{07-factorial.c}
+		
+
+\chapter{Counting Cases}
+\section{Problem Statement}
+Write a program to enter the numbers till the user wants and at the end it should display the count of positive,negative and zeros.
+\section{Program}
+\lstinputlisting[language=c]{08-po-ne-ze.c}
+
+\chapter{Pattern Generation}
+\section{Problem Statement}
+Write a program to generate following output
+		$\\*****$
+		$\\****$
+		$\\***$
+		$\\**$
+		$\\*$
+\section{Program}
+\lstinputlisting[language=c]{09-star.c}
+
+\chapter{Multiplication Table}
+\section{Problem Statement}
+Write a program to display Multiplication table from 1 to 10.
+\section{Program}
+\lstinputlisting[language=c]{10-multiplication-table.c}
+
+\chapter{Square or Cube}
+\section{Problem Statement}
+Write a program to display square of given number if it is odd and cube if it is even.
+\section{Program}
+\lstinputlisting[language=c]{11-square-cube.c}
+        
+\chapter{Raised to the Power}
+\section{Problem Statement}
+Two numbers are entered through the keyboard.Write a program to find the value of one number raise to the power of another.
+\section{Program}
+\lstinputlisting[language=c]{12-raised-power.c}
+
+\chapter{Product of Digits}
+\section{Problem Statement}
+Write a program to find the product of digits of any number.
+\section{Program}
+\lstinputlisting[language=c]{13-product-of-digits.c}
+
+\chapter{Sum of Digits}
+\section{Problem Statement}
+Write a program to find the sum of digits of any number.
+\section{Program}
+\lstinputlisting[language=c]{14-sum-of-digits.c}
+
+
+\end{document}
