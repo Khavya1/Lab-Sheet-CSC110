@@ -1,29 +1,44 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <math.h>
+
+float Fact(int x){
+
+    if (x == 0)
+        return 1;
+    if (x == 1)
+        return 1;
+    return (x * Fact(x - 1));
+}
+
+float sum(int a,int b){
+
+    printf("Sum= \t");
+
+    int x = 1;
+    float summed = 1;
+    float fact;
+
+    for (x = 1; x <= b; ++x)
+    {
+        fact = Fact(x);
+        summed = summed + (pow(a, x) / fact);
+
+        printf("1+(%d power %d/%f)+",a,x,fact);
+    }
+    return summed;
+}
 
 int main(){
-	int x,n;
-	float ans;
 
-	printf("Enter the value of x");
-	scanf("%d",&x);
+    int n,t;
+    float e;
 
-	printf("Enter the value of n");
-	scanf("%d",&n);
+    printf("enter base number: \n");
+    scanf("%d", &n);
+    printf("enter number of terms: \n");
+    scanf("%d",&t);
 
-	ans = series(x,n);
-
-	printf("The sum of the series is %f",ans);
-}
-
-int series(int x,int n){
-
-	float sum=1,no_roe=1;
-	int i;
-
-	for(i=1;i<n;i++){
-		no_roe = no_roe*x/(float)i;
-		sum = sum+no_roe;
-	}
-	return sum;
-}
-
+    e = sum(n,t);
+	
+    printf("\nis:%f", e);
+}  
